@@ -2,6 +2,7 @@ import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 Amplify.configure(awsconfig);
 
@@ -25,8 +26,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <AmplifySignOut/>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
