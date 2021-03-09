@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const federated = {
+  google_client_id: "261857359214-i88583s7eusmd9he5su6s6pnfdig52r2.apps.googleusercontent.com"
+};
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App federated={federated} />
   </React.StrictMode>,
   document.getElementById('root')
 );
