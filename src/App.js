@@ -33,4 +33,17 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+const MyTheme = {
+  googleSignInButton: { backgroundColor: "red", borderColor: "red" },
+  button: { backgroundColor: "green", borderColor: "red" },
+  signInButtonIcon: { display: "none" }
+};
+
+export default withAuthenticator(App, false, [], null, MyTheme, {
+  signUpConfig: {
+    hiddenDefaults: ["phone_number"],
+    signUpFields: [
+      { label: "Name", key: "name", required: true, type: "string" }
+    ]
+  }
+});
