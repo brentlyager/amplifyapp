@@ -8,7 +8,11 @@ Amplify.configure(awsconfig);
 
 function test() {
   var test = "test"
-  Auth.currentAuthenticatedUser().then(user => test = user.Username);
+  Auth.currentAuthenticatedUser().then( user => {
+    test = user.username; 
+    console.log( "User is " + user.username);
+    console.log(user)
+  });
   return test;
 }
 
