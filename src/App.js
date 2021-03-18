@@ -6,6 +6,10 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 Amplify.configure(awsconfig);
 
+function test() {
+  return "test";
+}
+
 function App() {
   return (
     <div className="App">
@@ -15,7 +19,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-          This is some sample text yet again
+          This is some sample text yet again {test()}
         </p>
         <a
           className="App-link"
