@@ -7,7 +7,9 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 Amplify.configure(awsconfig);
 
 function test() {
-  return "test";
+  var test = "test"
+  Auth.currentAuthenticatedUser().then(user => test = user.Username);
+  return test;
 }
 
 function App() {
